@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Domain
 {
@@ -6,11 +7,7 @@ namespace Domain
     {
         public string username { get; set; }
 
-        public string userId { get; set; }
-
-        public int[] posts { get; set; }
-
-        public int[] replies { get; set; }
+        public int userId { get; set; }
 
         public DateTime creationDate { get; set; }
 

@@ -6,7 +6,7 @@ namespace Domain
     {
         public int posterId { get; set; }
 
-        public int postId {get; set; }
+        public int threadId {get; set; }
 
         public string postContent { get; set; }
 
