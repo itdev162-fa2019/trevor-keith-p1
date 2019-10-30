@@ -1,3 +1,6 @@
-obj/
 bin/
+obj/
+node_modules/
 .vscode/
+appsettings.json
+*.db
