@@ -2,7 +2,7 @@ using System;
 
 namespace Domain
 {
-    public class Post
+    public class Thread
     {
         public int posterId { get; set; }
 
@@ -12,7 +12,7 @@ namespace Domain
 
         public DateTime creationDT { get; private set; }
 
-        public Post() {
+        public Thread() {
             creationDT = DateTime.Now;
 
         }

@@ -6,6 +6,8 @@ namespace Persistence
     public class DataContext : DbContext
     {
         public DbSet<User> users { get; set; }
+        public DbSet<Thread> threads { get; set; }
+        public DbSet<Reply> posts { get; set; }
 
         public DataContext(DbContextOptions options) : base(options) {
 
