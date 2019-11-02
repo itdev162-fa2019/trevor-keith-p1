@@ -21,6 +21,20 @@ namespace Persistence
 
             );
 
+            modelBuilder.Entity<Thread>().HasData(
+                new Thread { posterId = -1, threadId = -1, threadTitle = "Thread -1", threadContent = "Thread Content -1" },
+                new Thread { posterId = -2, threadId = -2, threadTitle = "Thread -2", threadContent = "Thread Content -2" },
+                new Thread { posterId = -3, threadId = -3, threadTitle = "Thread -3", threadContent = "Thread Content -3" }
+
+            );
+
+            modelBuilder.Entity<Reply>().HasData(
+                new Reply { posterId = -1, replyId = -1, replyContent = "Reply -1" },
+                new Reply { posterId = -2, replyId = -2, replyContent = "Reply -2" },
+                new Reply { posterId = -3, replyId = -3, replyContent = "Reply -3" }
+
+            );
+
         }
 
     }
