@@ -9,7 +9,7 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20191030050543_CreateDb")]
+    [Migration("20191102072437_CreateDb")]
     partial class CreateDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -17,6 +17,38 @@ namespace Persistence.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.2.6-servicing-10079");
+
+            modelBuilder.Entity("Domain.Reply", b =>
+                {
+                    b.Property<int>("replyId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("creationDT");
+
+                    b.Property<int>("posterId");
+
+                    b.Property<string>("replyContent");
+
+                    b.HasKey("replyId");
+
+                    b.ToTable("posts");
+                });
+
+            modelBuilder.Entity("Domain.Thread", b =>
+                {
+                    b.Property<int>("threadId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("creationDT");
+
+                    b.Property<string>("postContent");
+
+                    b.Property<int>("posterId");
+
+                    b.HasKey("threadId");
+
+                    b.ToTable("threads");
+                });
 
             modelBuilder.Entity("Domain.User", b =>
                 {
